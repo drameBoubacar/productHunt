@@ -1,12 +1,11 @@
 extends ../layout
 block content 
   .container
-    
     h1.text-center All products
     ul
       each product in products
         li.name #{ product.name }
         li #{ product.describe }
         li #{ product.url }
-        li #{ product.date }
+        //- li #{ product.date }
       
