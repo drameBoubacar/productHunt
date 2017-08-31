@@ -1,0 +1,8 @@
+extends ../layout
+block content
+  h1.text-center Ajouter un produit
+  form.text-center(action="/add", method="POST")
+    input(type = "text", name = "", placeholder = "nom du produit")
+    input(type = "text", name = "", placeholder = "description du produit")
+    input(type="text", name="", placeholder="url du produit")
+    button(type = "submit") Add

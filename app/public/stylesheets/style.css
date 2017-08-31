@@ -1,0 +1,20 @@
+body{
+  background-color: pink;
+}
+.navbar.navbar-light.bg-light{
+  border-bottom: 1px solid rgb(128, 134, 125);
+}
+a{
+  margin-left: 30px;
+  padding: 10px;
+  background-color: rgb(227, 83, 12);
+  border-radius: 12px;
+  color: white;
+}
+li{
+  list-style: none;
+}
+.name{
+  font-size: 30px;
+  font-weight: bold;
+}
