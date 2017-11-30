@@ -1,5 +1,7 @@
 extends ../layout
 block content
-  form(action="", method="POST")
-    input(type="text")
-    input(type="text")
+  form(action=`products/edit/${product.id}`, method="POST")
+    input(type="text", name="name", value=product.name)
+    input(type="text", name="describe", value=product.describe)
+    input(type="text", name="url", value=product.url)
+    button(type="submit") edit

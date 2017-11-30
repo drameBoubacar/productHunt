@@ -5,7 +5,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/products', { useMongoClient: true }, () => {
-  console.log('Connexion a la base de donnée établie');
+  console.log('conexion Db initialized');
 });
 
 const app = express();

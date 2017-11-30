@@ -1,11 +1,14 @@
 extends ../layout
 block content 
   .container
-    h1.text-center All products
-    ul
-      each product in products
-        li.name #{ product.name }
-        li #{ product.describe }
-        li #{ product.url }
-        //- li #{ product.date }
+    .col-md-6
+      h1.text-center All products
+      a(href="/add") Add products
+      a(href="") delete
+      ul
+        each product in products
+          li.name #{ product.name }    
+          li #{ product.describe } 
+          a(href=`/edit/${product.id}`) edit products
+          li #{ product.url }
       

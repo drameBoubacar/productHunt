@@ -22,7 +22,26 @@ router.get('/add', (request, response) => {
 
 router.post('/add', (request, response) => {
   const product = new Product(request.body);
-  product.save((error, newProducts) => {
+  product.save((error) => {
+    if (error) {
+      response.send(error);
+    }
+    response.redirect('/products');
+  });
+});
+
+router.get('/edit/:id', (request, response) => {
+  Product.findById(request.params.id, (error, product) => {
+    console.log(product);
+    if (error) {
+      response.send(error);
+    }
+    response.render('products/edit', { product });
+  });
+});
+
+router.post('/edit/:id', (request, response) => {
+  Product.findByIdAndRemove(request.params.id, request.body, (error) => {
     if (error) {
       response.send(error);
     }
